@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "Deterministic",
+    "synonyms": [ "Deterministic", "NLU", "Flow" ],
+    "languageCode": "en"
+  }, {
+    "value": "Generative",
+    "synonyms": [ "Generative", "Playbook", "Playbooks" ],
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "5f18f77b-09a6-483a-9831-09fc8b033284",
+  "displayName": "Weather Forecast Tool",
+  "description": "A web function that returns the weather forecast for a particular location.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

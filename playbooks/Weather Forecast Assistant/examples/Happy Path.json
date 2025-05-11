@@ -1,0 +1,218 @@
+{
+  "name": "aba4b830-025d-470e-879d-801c57eaf829",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hi there, I'm Holly, your weather forecast virtual assistant.  Which city should I look up the weather service on your behalf?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "hey Holly, I'm planning a trip to Bali this weekend"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Oh how exciting, a vacation to Bali, Indonesia.  Are you looking at Denpasar or any other city in Bali for the forecast?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yes, please look up Denpasar"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Weather Forecast Tool",
+      "action": "POST/",
+      "inputActionParameters": {
+        "requestBody": {
+          "location": "Denpasar",
+          "unit": "metric"
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "current": {
+            "date": "2024-11-18",
+            "day_of_week": "Monday",
+            "precipitationChance": 0,
+            "temperature": 27.899999999999999,
+            "timePeriod": "Current"
+          },
+          "daily": [ {
+            "date": "2024-11-18",
+            "day_of_week": "Monday",
+            "precipitationChance": 1,
+            "temperature_max": 30.079999999999998,
+            "temperature_min": 25.48
+          }, {
+            "date": "2024-11-19",
+            "day_of_week": "Tuesday",
+            "precipitationChance": 0.92000000000000004,
+            "temperature_max": 29.73,
+            "temperature_min": 26.02
+          }, {
+            "date": "2024-11-20",
+            "day_of_week": "Wednesday",
+            "precipitationChance": 0.95999999999999996,
+            "temperature_max": 29.690000000000001,
+            "temperature_min": 26.010000000000002
+          }, {
+            "date": "2024-11-21",
+            "day_of_week": "Thursday",
+            "precipitationChance": 0.80000000000000004,
+            "temperature_max": 29.59,
+            "temperature_min": 25.949999999999999
+          }, {
+            "date": "2024-11-22",
+            "day_of_week": "Friday",
+            "precipitationChance": 0.77000000000000002,
+            "temperature_max": 29.68,
+            "temperature_min": 26.170000000000002
+          }, {
+            "date": "2024-11-23",
+            "day_of_week": "Saturday",
+            "precipitationChance": 0.79000000000000004,
+            "temperature_max": 29.579999999999998,
+            "temperature_min": 26.57
+          }, {
+            "date": "2024-11-24",
+            "day_of_week": "Sunday",
+            "precipitationChance": 0.72999999999999998,
+            "temperature_max": 29.539999999999999,
+            "temperature_min": 26.559999999999999
+          }, {
+            "date": "2024-11-25",
+            "day_of_week": "Monday",
+            "precipitationChance": 0.98999999999999999,
+            "temperature_max": 29.579999999999998,
+            "temperature_min": 26.43
+          } ],
+          "location": "Denpasar"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Certainly! Here's a tabular view of the forecast for Friday, Saturday, and Sunday in Denpasar:\n\n  | Day      | High (°C) | Low (°C) | Chance of Rain (%) |\n  | -------- | -------- | -------- | ------------------ |\n  | Friday   | 29.68     | 26.17    | 77                 |\n  | Saturday | 29.58     | 26.57    | 79                 |\n  | Sunday   | 29.54     | 26.56    | 73                 |\n     \n     \nThe weather outlook for this coming Friday, Saturday and Sunday is a typical warm tropical weather but there is an elevated chance of rain.  If you plan on outdoor activities like spending the day at the beach or hiking, it would not be enjoyable.\n\nPlease let me know if you have any other questions."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Do you think I should postpone my trip or consider going somewhere else for my break?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "That's a tough call!  The forecast shows a significant chance of rain throughout your planned weekend in Denpasar.  Whether to postpone or change locations depends on your priorities. If you're hoping for sunny beach weather, it might be wise to consider an alternative destination or postponing your trip.  However, if you're flexible and don't mind occasional rain showers, Bali could still be enjoyable.  What are your priorities for this trip?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to spend my weekend on the beach in nice warm and dry weather.  Can you look up Gold Coast for me?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Weather Forecast Tool",
+      "action": "POST/",
+      "inputActionParameters": {
+        "requestBody": {
+          "location": "Gold Coast, Australia",
+          "unit": "metric"
+        }
+      },
+      "outputActionParameters": {
+        "200": {
+          "current": {
+            "date": "2024-11-18",
+            "day_of_week": "Monday",
+            "precipitationChance": 0,
+            "temperature": 20.98,
+            "timePeriod": "Current"
+          },
+          "daily": [ {
+            "date": "2024-11-19",
+            "day_of_week": "Tuesday",
+            "precipitationChance": 0.97999999999999998,
+            "temperature_max": 21.100000000000001,
+            "temperature_min": 19.620000000000001
+          }, {
+            "date": "2024-11-20",
+            "day_of_week": "Wednesday",
+            "precipitationChance": 1,
+            "temperature_max": 20.59,
+            "temperature_min": 19.23
+          }, {
+            "date": "2024-11-21",
+            "day_of_week": "Thursday",
+            "precipitationChance": 0.22,
+            "temperature_max": 22.309999999999999,
+            "temperature_min": 19.620000000000001
+          }, {
+            "date": "2024-11-22",
+            "day_of_week": "Friday",
+            "precipitationChance": 0.37,
+            "temperature_max": 22.359999999999999,
+            "temperature_min": 19.73
+          }, {
+            "date": "2024-11-23",
+            "day_of_week": "Saturday",
+            "precipitationChance": 0.42999999999999999,
+            "temperature_max": 24.050000000000001,
+            "temperature_min": 19.780000000000001
+          }, {
+            "date": "2024-11-24",
+            "day_of_week": "Sunday",
+            "precipitationChance": 0.10000000000000001,
+            "temperature_max": 24.370000000000001,
+            "temperature_min": 18.829999999999998
+          }, {
+            "date": "2024-11-25",
+            "day_of_week": "Monday",
+            "precipitationChance": 0.58999999999999997,
+            "temperature_max": 24.510000000000002,
+            "temperature_min": 20.050000000000001
+          }, {
+            "date": "2024-11-26",
+            "day_of_week": "Tuesday",
+            "precipitationChance": 0.68999999999999995,
+            "temperature_max": 25.120000000000001,
+            "temperature_min": 21.109999999999999
+          } ],
+          "location": "Gold Coast"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here's a more detailed look at the Gold Coast forecast for Friday, Saturday, and Sunday:\n\n| Day      | High (°C) | Low (°C) | Chance of Rain (%) |\n| -------- | -------- | -------- | ------------------ |\n| Friday   | 22.36     | 19.73    | 37                 |\n| Saturday | 24.05     | 19.78    | 43                 |\n| Sunday   | 24.37     | 18.83    | 10                 |\n     \n     \nThe forecast for the Gold Coast shows a much lower chance of rain than Denpasar for your planned weekend.  While there's still a possibility of showers, it's significantly less likely than in Bali.  The temperatures are also pleasant, ranging from highs in the low 20s Celsius to highs in the mid 20s Celsius.  \n\nLet me know if you have any other questions."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Excellent, appreciate your help."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You're very welcome! Is there anything else I can assist you with today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "no, that's all.  Thanks again."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "My pleasure, bye for now."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The conversation has just been initiated",
+    "actionParameters": {
+      "location": "Denpasar",
+      "unit": "metric",
+      "user-country": "Australia"
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Greet and interacted with the user, ask them for their desired city for weather forecast.  Provided the forecast and interacted further on suggested activities.",
+    "actionParameters": {
+      "conversation-state": "Completed"
+    }
+  },
+  "displayName": "Happy Path",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

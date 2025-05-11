@@ -1,0 +1,70 @@
+{
+  "name": "3edddc47-8360-407b-856a-9b3c2c84ee4f",
+  "displayName": "Flow or Playbook?",
+  "form": {
+    "parameters": [ {
+      "displayName": "cai_type",
+      "required": true,
+      "entityType": "@conversation_mechanism",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Deterministic or Generative?", "NLU Flow or Playbook?" ]
+            },
+            "languageCode": "en"
+          } ],
+          "nextActionOverride": {
+          
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Hi there, this demo conversational agents with weather forecasting ability is available as:\n\n-  Deterministic NLU-based Flow OR\n-  Generative steering Playbook\n\nPlease let me know which you'd like to experience." ]
+      },
+      "languageCode": "en"
+    } ],
+    "nextActionOverride": {
+    
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.conversation-state = Completed",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you for using our weather forecasting service.  Have a great day.  Bye.", "Have a good one.  You know where to find me if you need more weather forecasts.", "Bye for now.  Feel free to reach out if you need." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "[Session Ended]\nTo start over, say \"hello\"" ]
+        },
+        "languageCode": "en"
+      } ],
+      "nextActionOverride": {
+      
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e33ed264-f19a-487e-b603-3fe0d12064ed"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.cai_type = Deterministic",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Get Location Info",
+    "name": "fbc729fc-f785-4c45-89fa-cd2f83706cbd"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.cai_type = Generative",
+    "triggerFulfillment": {
+    
+    },
+    "name": "4f8d7a59-e7bf-41b7-aac9-02fdd1b50453",
+    "targetPlaybook": "Weather Forecast Assistant"
+  } ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "53bb604d-a5f9-4d8d-8a41-66d56a918bf2",
+  "displayName": "8-day Forecast Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "| Day | Date | Max | Min | % Rain |\n|-------|-------|-------|-------|-------|\n|$sys.func.GET($session.params.future-days,0)|$sys.func.GET($session.params.future-dates,0)|$sys.func.GET($session.params.future-maxs,0)|$sys.func.GET($session.params.future-mins,0)|$sys.func.GET($session.params.future-rains,0)|\n|$sys.func.GET($session.params.future-days,1)|$sys.func.GET($session.params.future-dates,1)|$sys.func.GET($session.params.future-maxs,1)|$sys.func.GET($session.params.future-mins,1)|$sys.func.GET($session.params.future-rains,1)|\n|$sys.func.GET($session.params.future-days,2)|$sys.func.GET($session.params.future-dates,2)|$sys.func.GET($session.params.future-maxs,2)|$sys.func.GET($session.params.future-mins,2)|$sys.func.GET($session.params.future-rains,2)|\n|$sys.func.GET($session.params.future-days,3)|$sys.func.GET($session.params.future-dates,3)|$sys.func.GET($session.params.future-maxs,3)|$sys.func.GET($session.params.future-mins,3)|$sys.func.GET($session.params.future-rains,3)|\n|$sys.func.GET($session.params.future-days,4)|$sys.func.GET($session.params.future-dates,4)|$sys.func.GET($session.params.future-maxs,4)|$sys.func.GET($session.params.future-mins,4)|$sys.func.GET($session.params.future-rains,4)|\n|$sys.func.GET($session.params.future-days,5)|$sys.func.GET($session.params.future-dates,5)|$sys.func.GET($session.params.future-maxs,5)|$sys.func.GET($session.params.future-mins,5)|$sys.func.GET($session.params.future-rains,5)|\n|$sys.func.GET($session.params.future-days,6)|$sys.func.GET($session.params.future-dates,6)|$sys.func.GET($session.params.future-maxs,6)|$sys.func.GET($session.params.future-mins,6)|$sys.func.GET($session.params.future-rains,6)|\n|$sys.func.GET($session.params.future-days,7)|$sys.func.GET($session.params.future-dates,7)|$sys.func.GET($session.params.future-maxs,7)|$sys.func.GET($session.params.future-mins,7)|$sys.func.GET($session.params.future-rains,7)|\n\n    \n\n" ]
+      },
+      "languageCode": "en"
+    } ],
+    "nextActionOverride": {
+    
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "e43be3b5-c373-4324-911a-e7d4257dd0f2"
+  } ]
+}

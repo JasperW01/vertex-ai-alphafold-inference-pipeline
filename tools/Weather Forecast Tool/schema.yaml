@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: Weather Forecast API
+  version: 1.0.0
+  description:  a Weather Forecast Service.
+servers:
+  - url: 'https://weather-forecast-927033137380.us-central1.run.app'
+paths:
+  /:
+    post:
+      summary: Weather Forecase for Location
+      description: 
+      requestBody:
+        content:
+          application/json:
+            schema:
+                type: object
+                properties:
+                    location:
+                        type: string
+                        description: Any major Geo-city
+                    unit:
+                        type: string
+                        description: Unit of measure.  Possible values are standard, metric or imperial
+                        example: metric
+                required:
+                    - location
+      responses:
+        '200':
+          description: Weather forecast returned 
+          content:
+            application/json:
+              schema:
+                type: object

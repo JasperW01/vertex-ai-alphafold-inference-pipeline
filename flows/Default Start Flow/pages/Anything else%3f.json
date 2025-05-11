@@ -1,0 +1,70 @@
+{
+  "name": "54487bd0-aa90-4e91-9553-fa4142bae1b9",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Is there another city you'd like to get a forecast?", "Would you like to get another forecast?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes"
+          }, {
+            "text": "No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "nextActionOverride": {
+    
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Let's start over..." ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "location",
+        "value": null
+      } ],
+      "nextActionOverride": {
+      
+      }
+    },
+    "targetPage": "Get Location Info",
+    "name": "83249c50-aee1-46d8-a0b0-79edb8064eed"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "No worries, have a great day.  Bye.", "Thank you for trying out the simple Deterministic flow.  See ya." ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "[Session Ended]\nTo start over, say \"hello\"" ]
+        },
+        "languageCode": "en"
+      } ],
+      "nextActionOverride": {
+      
+      }
+    },
+    "targetPage": "End Session",
+    "name": "fff771eb-f1e1-43a6-8bf5-2e48e5bf9111"
+  } ]
+}

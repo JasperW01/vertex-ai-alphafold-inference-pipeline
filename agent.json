@@ -1,0 +1,61 @@
+{
+  "displayName": "Global Weather Forecast",
+  "defaultLanguageCode": "en",
+  "timeZone": "Australia/Sydney",
+  "enableLogging": true,
+  "projectNumber": 927033137380,
+  "speechToTextSettings": {
+  
+  },
+  "startFlow": "Default Start Flow",
+  "enableStackdriverLogging": true,
+  "advancedSettings": {
+    "enabled": true,
+    "audioExportGcsDestination": {
+    
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    },
+    "playbackInterruptionSettings": {
+      "allowPlaybackInterruption": true
+    },
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  },
+  "textToSpeechSettings": {
+    "synthesizeSpeechConfigs": [ {
+      "key": "en",
+      "value": {
+        "voice": {
+          "name": "en-AU-Chirp3-HD-Puck",
+          "ssmlGender": "SSML_VOICE_GENDER_MALE"
+        }
+      }
+    } ]
+  },
+  "duplexSettings": {
+  
+  },
+  "callCompanionSettings": {
+    "company": "AIG Contact Centre"
+  },
+  "answerFeedbackSettings": {
+  
+  },
+  "webClientSettings": {
+    "displayName": "AIG Contact Centre",
+    "boxBorderRadius": "0"
+  }
+}

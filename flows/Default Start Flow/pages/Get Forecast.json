@@ -1,0 +1,72 @@
+{
+  "name": "9bf7e79e-a145-4df7-ba7d-61256f38632e",
+  "displayName": "Get Forecast",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Thank you for waiting.", "Appreciate your patience." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "In $session.params.location, the current temperature is $session.params.current-forecast-temperature degrees with $session.params.current-forecast-precipitation% of precipitation." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Would you like to look ahead and see the 8-day forecast?" ]
+      },
+      "languageCode": "en"
+    }, {
+      "payload": {
+        "richContent": [ [ {
+          "options": [ {
+            "text": "Yes"
+          }, {
+            "text": "No"
+          } ],
+          "type": "chips"
+        } ] ]
+      },
+      "languageCode": "en"
+    } ],
+    "webhook": "Weather Forecast Service",
+    "tag": "forecast",
+    "returnPartialResponses": true,
+    "nextActionOverride": {
+    
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "ce774ef5-c080-4c47-8a71-477b29f23e3e"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "day_index",
+        "value": 0
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      },
+      "nextActionOverride": {
+      
+      }
+    },
+    "targetPage": "8-day Forecast Details",
+    "name": "64e152dd-670f-43e9-8b51-b8aee67cd20f"
+  } ]
+}

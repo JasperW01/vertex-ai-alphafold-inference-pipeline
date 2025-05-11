@@ -1,0 +1,37 @@
+{
+  "name": "07155104-cd02-4ea5-a19f-e1eb4b19056a",
+  "displayName": "Get Location Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "location",
+      "required": true,
+      "entityType": "@sys.geo-city",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which city are you looking to get a weather forecast?", "Weather forecast for which city?", "Which city for the weather forecast please?", "Please let me know which city for weather forecast" ]
+            },
+            "languageCode": "en"
+          } ],
+          "nextActionOverride": {
+          
+          }
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "nextActionOverride": {
+      
+      }
+    },
+    "targetPage": "Get Forecast",
+    "name": "2c3b0f73-d0eb-4f95-9555-4a79eb4ac91e"
+  } ],
+  "knowledgeConnectorSettings": {
+  
+  }
+}

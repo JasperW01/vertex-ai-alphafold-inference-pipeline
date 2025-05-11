@@ -1,0 +1,44 @@
+{
+  "name": "a7ec4df3-bfc7-4850-8d4e-24d93feb7934",
+  "displayName": "Weather Forecast Service",
+  "genericWebService": {
+    "uri": "https://weather-forecast-927033137380.us-central1.run.app",
+    "webhookType": "FLEXIBLE",
+    "httpMethod": "POST",
+    "requestBody": "{\n\t\"location\":\"$session.params.location\"\n}",
+    "parameterMapping": [ {
+      "key": "current-forecast-date",
+      "value": "$.current.date"
+    }, {
+      "key": "current-forecast-day",
+      "value": "$.current.day_of_week"
+    }, {
+      "key": "current-forecast-precipitation",
+      "value": "$.current.precipitationChance"
+    }, {
+      "key": "current-forecast-temperature",
+      "value": "$.current.temperature"
+    }, {
+      "key": "future-dates",
+      "value": "$.daily_lists.dates"
+    }, {
+      "key": "future-days",
+      "value": "$.daily_lists.days"
+    }, {
+      "key": "future-forecast",
+      "value": "$.daily"
+    }, {
+      "key": "future-maxs",
+      "value": "$.daily_lists.max_temps"
+    }, {
+      "key": "future-mins",
+      "value": "$.daily_lists.min_temps"
+    }, {
+      "key": "future-rains",
+      "value": "$.daily_lists.rain_probs"
+    } ]
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

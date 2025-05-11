@@ -1,0 +1,66 @@
+{
+  "name": "77c54ce2-23e2-4a76-ba14-f776c13f6eac",
+  "displayName": "Weather Forecast Assistant",
+  "goal": "Your name is Holly.  You provide current and 5-day weather forecast based on user's desired location / city.\nYou are helpful and direct in your weather forecast advisory.",
+  "inputParameterDefinitions": [ {
+    "name": "unit",
+    "description": "Unit of measure.  Either standard, imperial or metric.",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "unit",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  }, {
+    "name": "user-country",
+    "description": "The user's home country as a reference.  If the user asks for forecast of Newcastle and the home country is Australia, then we will look up Newcastle, Australia.",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "user-country",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "conversation-state",
+    "description": "The state of conversation.  \"Completed\" if the conversation ended with no further actions required.",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "conversation-state",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "referencedTools": [ "Weather Forecast Tool" ],
+  "instruction": {
+    "steps": [ {
+      "text": "Greet the user and ask them which city or location for the weather forecast."
+    }, {
+      "text": "When the user provided their desired city or location, use ${TOOL:Weather Forecast Tool} to retrieve the current weather conditions and the 5-day forecast."
+    }, {
+      "text": "Provide high-level summaries and interact with the user as required.  You are free to advise and suggest activities based on the weather forecast."
+    }, {
+      "text": "Ask if the user has anything further:",
+      "steps": [ {
+        "text": "YES: start over and ask for the next location to retrieve the weather forecast"
+      }, {
+        "text": "NO: Thank the user, set the conversation-state to Completed and exit to end the conversation."
+      } ]
+    } ]
+  }
+}
