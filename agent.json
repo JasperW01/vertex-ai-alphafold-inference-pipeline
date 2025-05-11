@@ -2,7 +2,6 @@
   "displayName": "Global Weather Forecast",
   "defaultLanguageCode": "en",
   "timeZone": "Australia/Sydney",
-  "enableLogging": true,
   "projectNumber": 927033137380,
   "speechToTextSettings": {
   
@@ -24,8 +23,7 @@
       "allowPlaybackInterruption": true
     },
     "loggingSettings": {
-      "enableStackdriverLogging": true,
-      "enableInteractionLogging": true
+      "enableStackdriverLogging": true
     },
     "speechAdaptationSettings": {
     
