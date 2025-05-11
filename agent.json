@@ -7,7 +7,6 @@
   
   },
   "startFlow": "Default Start Flow",
-  "enableStackdriverLogging": true,
   "advancedSettings": {
     "enabled": true,
     "audioExportGcsDestination": {
@@ -23,7 +22,7 @@
       "allowPlaybackInterruption": true
     },
     "loggingSettings": {
-      "enableStackdriverLogging": true
+    
     },
     "speechAdaptationSettings": {
     
